@@ -1,0 +1,28 @@
+﻿<tanjiwpf:ExtensionWindow
+        x:Class="b7.Packets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:b7.Packets"
+        xmlns:tanjiwpf="clr-namespace:TanjiWPF;assembly=TanjiWPF"
+        mc:Ignorable="d"
+        TextOptions.TextFormattingMode="Display"
+        Title="b7 packets" Height="460" Width="880"
+        Topmost="{Binding Path=IsChecked, ElementName=checkBoxTopmost}">
+    <Grid>
+        <TabControl x:Name="tabControlMain" Grid.Row="1" Margin="4">
+            <TabItem Header="Logger">
+                <local:PacketLoggerView x:Name="packetLogger" />
+            </TabItem>
+            <TabItem Header="Messages">
+                <local:MessagesView x:Name="messagesView" />
+            </TabItem>
+            <TabItem x:Name="structuralizerTab" Header="Structuralizer">
+                <local:StructuralizerView x:Name="structuralizer" />
+            </TabItem>
+        </TabControl>
+        <CheckBox x:Name="checkBoxTopmost" Margin="6,6,12,6" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Always on top" 
+                  Opacity="0.25" IsChecked="True" />
+    </Grid>
+</tanjiwpf:ExtensionWindow>
