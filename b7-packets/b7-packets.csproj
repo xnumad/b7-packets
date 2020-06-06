@@ -149,7 +149,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\tanjiwpf\tanjiwpf\TanjiWPF.csproj">
+    <ProjectReference Include="..\tanjiwpf\tanjiwpf\TanjiWPF.csproj">
       <Project>{e7246312-2de4-44a7-a53f-95a6b12d0902}</Project>
       <Name>TanjiWPF</Name>
     </ProjectReference>
